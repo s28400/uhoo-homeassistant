@@ -77,15 +77,15 @@ class UhooDataUpdateCoordinator(DataUpdateCoordinator):
         super().__init__(hass, LOGGER, name=DOMAIN, update_interval=UPDATE_INTERVAL)
 
     async def _async_update_data(self) -> Dict[str, Device]:
-        try:
-            await self.client.get_latest_data()
-            self.user_settings_temp = self.client.user_settings_temp
-            return self.client.get_devices()  # type: ignore
-        except Exception as exception:
-            LOGGER.error(
-                f"Error: an exception occurred while attempting to get latest data: {exception}"
-            )
-            raise UpdateFailed() from exception
+    # try:
+        await self.client.get_latest_data()
+        self.user_settings_temp = self.client.user_settings_temp
+        return self.client.get_devices()  # type: ignore
+    # except Exception as exception:
+    #     LOGGER.error(
+    #         f"Error: an exception occurred while attempting to get latest data: {exception}"
+    #     )
+        raise UpdateFailed() from exception
 
 
 async def async_unload_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> bool:
