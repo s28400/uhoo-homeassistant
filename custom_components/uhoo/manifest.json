@@ -1,11 +1,11 @@
 {
   "domain": "uhoo",
   "name": "uHoo",
-  "documentation": "https://github.com/csacca/uhoo-homeassistant",
+  "documentation": "https://github.com/s28400/uhoo-homeassistant",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/csacca/uhoo-homeassistant/issues",
-  "version": "0.0.4",
+  "issue_tracker": "https://github.com/s28400/uhoo-homeassistant/issues",
+  "version": "0.0.5",
   "config_flow": true,
-  "codeowners": ["@csacca"],
-  "requirements": ["pyuhoo==0.0.5"]
+  "codeowners": ["@csacca, @s28400"],
+  "requirements": ["pyuhoo @ https://github.com/s28400/pyuhoo.git"]
 }
